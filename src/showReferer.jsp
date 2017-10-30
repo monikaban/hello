@@ -1,19 +1,18 @@
 <html>
 	<head>
 		<%@page import="referer.TrackRefererDomain"%>
-		<%@page import="org.json.simple.JSONObject"%>
-		<%@page import="org.json.simple.JSONArray"%>
+		<%@page import="org.json.JSONObject"%>
+		<%@page import="org.json.JSONArray"%>
 		<script src="js/jquery.js"></script>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 	</head>
 	
 	<body>		
 		<H2>Top 3 Referrer domains and their count </H2>
-		<%	
+		<%
 			TrackRefererDomain tRef = new TrackRefererDomain();		
 			JSONArray reportData = (JSONArray)tRef.getTopRefererDomains();			
-			System.out.println("Top 3 Referer Domains:" + reportData);			
-		%>				
+		%>
 		<div id="rootDiv"></div>
 	
 		<p><%//reportData%></p>

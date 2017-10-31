@@ -84,10 +84,14 @@ public class TrackRefererDomain {
 	    if(listSize <= 0) {
 			return topRefList;
 	    }
-	    constructJsonForDomainObject(refList.get(listSize-1), topRefList);
-	    constructJsonForDomainObject(refList.get(listSize-2), topRefList);
-	    constructJsonForDomainObject(refList.get(listSize-3), topRefList); 
 
+	    constructJsonForDomainObject(refList.get(listSize-1), topRefList);
+	    if(listSize > 1) {
+		    constructJsonForDomainObject(refList.get(listSize-2), topRefList);
+	    }
+	    if(listSize > 2) {
+	    	constructJsonForDomainObject(refList.get(listSize-3), topRefList); 
+	    }
 		return topRefList;
 	}
 	

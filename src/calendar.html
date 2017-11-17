@@ -1,0 +1,36 @@
+<html>
+<head> 
+    <meta charset="utf-8" /> 
+    <title>Calendar Widget</title>
+	<script src="js/calendar.js"></script>
+	<script src="js/jquery.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+
+  <body onload="onLoad()">
+     <H3>Calendar</H3>
+     <div id="showData"> </div>  
+     	  <div id="calendar-container">
+            <div id="calendar-header">
+                <span id="calendar-month-year"></span>
+            </div>
+            <div id="calendar-dates">
+            </div>
+        </div>    
+        	<form name='saveForm'>
+				<p> Meeting Event: </p>
+				<div id = "result"> </div>
+							
+				Date:<input id='sdate' name='sdate' value=''> </input> 
+				Start Time:<input id='start' name='start' value=''> </input> 
+				End Time:<input id='end' name='end' value=''> </input>
+			
+				<input type="button" name="Save" value=" Add " title="Save" onClick="scheduleMeeting();"></input>
+				<input type="button" name="remove" value=" Remove " title="Remove" onClick="scheduleMeeting(false);"></input>
+				<input type="button" name="showdetails" value=" Show " title="Show details" onClick="renderMeetingForDate();"></input>						
+			</form>
+     	<div id = "show"> </div>
+  </body>
+</html>
+
+

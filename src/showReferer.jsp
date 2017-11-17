@@ -40,5 +40,23 @@
 		    console.log( "ready!" );
 		    renderResults(refData);
 		});		
+		
+		function getData(){
+			var url = "http://localhost:8080/RestWithJersey2/reverser/trd/get_url/"; //"http://localhost:8080/RestWithJersey2/reverser/trd/www.yahoo.com";
+			$.ajax({
+				url: url,
+				dataType: 'json',
+				async: true,
+				type: 'GET',
+				success: function(result) {
+					console.log("after ajax jsonStr:" +  JSON.stringify(result));
+					return result;
+				},
+				error: function(result){
+					console.log("Error while refreshing variable values during the ajax call." + JSON.stringify(result));
+				},
+				timeout: 120000 // 2 min  
+			});
+		}
 	</script>
 </html>

@@ -70,7 +70,7 @@ function addMeeting(currMeeting) {
 function renderMeetingForDate(){
 
 	 $("#show").empty();
-	 $("#show").empty();
+	 $("#result").empty();
 	 //localStorage.clear();
 	  var sdate = document.getElementById("sdate");
 		if(sdate === undefined){

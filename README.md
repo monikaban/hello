@@ -1,6 +1,6 @@
 # Referer program
 
-This service tracks referrers to a website and their counts by domain.
+This REST service tracks referrers to a website and their counts by domain.
  - Endpoint to accept a url as a parameter and count the number of times the domain in the url has been seen.
  - Endpoint that returns the 3 highest seen referring domains.
  - UI that displays the 3 highest domains.
